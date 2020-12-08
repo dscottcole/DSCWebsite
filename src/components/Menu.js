@@ -22,12 +22,13 @@ export default function FadeMenu(props) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
-    const handleClick = (event) => {
+    const handleClick = (event,newValue) => {
         setAnchorEl(event.currentTarget);
     };
 
-    const handleClose = () => {
+    const handleClose = (event,newValue) => {
         setAnchorEl(null);
+        props.changeTab(event.target.getAttribute('name'))
     };
 
     return (
@@ -44,7 +45,7 @@ export default function FadeMenu(props) {
                 TransitionComponent={Fade}
                 className="test"
             >
-                {props.options.map(option => <MenuItem onClick={handleClose}>{option}</MenuItem>)}
+                {props.options.map((option, index) => <MenuItem name={option} key={index} onClick={handleClose}>{option}</MenuItem>)}
             </Menu>
         </div>
     );
