@@ -2,7 +2,15 @@ body {
   font-family: "Roboto";
   background-image: url("./images/background.jpg");
   background-position: middle;
-  background-size: cover;
+  background-size: 100vw 100vh;
   background-repeat: no-repeat;
-  
+}
+
+.MuiList-root {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.MuiListItem-root:hover {
+  color: rgba(255, 100, 0, 1);
 }

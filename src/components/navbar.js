@@ -12,7 +12,6 @@ const StyledTabs = withStyles({
     "& > span": {
       maxWidth: 40,
       width: "100%",
-    //   backgroundColor: "#635ee7"
     backgroundColor: "rgba(255,100,0)"
     },
     margin: "auto"
@@ -41,12 +40,16 @@ const useStyles = makeStyles((theme) => ({
   },
   nav: {
     // backgroundColor: "#2e1534",
-    backgroundColor: "rgba(0,0,0,0.5)",
+    backgroundColor: "rgba(0,0,0,0.7)",
     minWidth: window.innerWidth
+  },
+  logo: {
+    color: "rgba(255,100,0,1)",
+    
   }
 }));
 
-export default function CustomizedTabs() {
+export default function Navbar(props) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -61,11 +64,8 @@ export default function CustomizedTabs() {
           value={value}
           onChange={handleChange}
         >
-          <StyledTab label="Home" />
-          <StyledTab label="Portfolio" />
-          <StyledTab label="Resume" />
-          <StyledTab label="About Me" />
-          <StyledTab label="Contact" />
+          {props.options.map(option => <StyledTab label={option} />)}
+          {/* <Typography className={classes.logo} variant="h4" >DSC</Typography> */}
         </StyledTabs>
         <Typography className={classes.padding} />
       </div>

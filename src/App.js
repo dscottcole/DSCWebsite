@@ -1,17 +1,30 @@
 import React from 'react';
+import { useState, useLayoutEffect } from 'react'
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
 import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
 import Navbar from './components/Navbar'
+import Menu from './components/Menu'
 import AppBody from './components/AppBody'
+
+function useWindowSize() {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+  return size;
+}
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -61,14 +74,18 @@ App.propTypes = {
 };
 
 export default function BackToTop(props) {
+  const [windowWidth, windowHeight] = useWindowSize()
+  const options = ["Home", "Portfolio", "Résumé", "About Me"]
+
+
   return (
     <React.Fragment>
       <CssBaseline />
       <AppBar color="transparent">
-          <Navbar/>
+        {windowWidth <= 900 ? <Menu options={options}/> : <Navbar options={options}/>}
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
-      <AppBody/>
+      <AppBody />
       <App {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
