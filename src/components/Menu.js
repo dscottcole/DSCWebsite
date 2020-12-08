@@ -4,7 +4,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Fade from '@material-ui/core/Fade';
 import MenuIcon from '@material-ui/icons/Menu';
-import { makeStyles, withStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -33,7 +33,7 @@ export default function FadeMenu(props) {
     return (
         <div className={classes.root}>
             <Button aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
-                <MenuIcon style={{ backgroundColor: "rgba(0,0,0,0.8)", color: "rgba(255,100,0,1)", height: "35", width: "35" }}/>
+                <MenuIcon style={{ backgroundColor: "rgba(0,0,0,0.5)", color: "rgba(255,100,0,1)", height: "35", width: "35" }}/>
             </Button>
             <Menu
                 id="fade-menu"
