@@ -4,6 +4,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import {useEffect} from "react"
+import Logo from "./Logo"
 
 const StyledTabs = withStyles({
   indicator: {
@@ -42,18 +43,22 @@ const useStyles = makeStyles((theme) => ({
   nav: {
     // backgroundColor: "#2e1534",
     backgroundColor: "rgba(0,0,0,0.7)",
-    minWidth: window.innerWidth
+    minWidth: window.innerWidth,
   },
   logo: {
     color: "rgba(255,100,0,1)",
-    
-  }
-}));
+    fontFamily: 'chevrola',
+    // position: "relative",
+    // right: -900,
+    // top: 10,
+    paddingLeft: 450,
+    paddingTop: 10
+  },
+}))
 
 function Navbar(props) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
     props.changeTab(newValue)
@@ -65,15 +70,14 @@ function Navbar(props) {
 
   return (
     <div className={classes.root}>
+      <Logo />
       <div className={classes.nav}>
         <StyledTabs
           value={value}
           onChange={handleChange}
         >
           {props.options.map((option,index) => <StyledTab key={index} label={option} />)}
-          {/* <Typography className={classes.logo} variant="h4" >DSC</Typography> */}
         </StyledTabs>
-        <Typography className={classes.padding} />
       </div>
     </div>
   );

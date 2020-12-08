@@ -4,9 +4,10 @@ import AppBar from '@material-ui/core/AppBar';
 import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Menu from './components/Menu'
+import Footer from './components/Footer'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  App: {
     flexGrow: 1,
   }
 }));
@@ -35,10 +36,11 @@ function App() {
   const changeTab = (tabName) => typeof tabName === 'number'? setCurrentTab(options[tabName]) : setCurrentTab(tabName)
 
   return (
-    <div className={classes.root}>
+    <div className={classes.App}>
       <AppBar color="transparent">
           {windowWidth <= 900 ? <Menu options={options} changeTab={changeTab} /> : <Navbar options={options} changeTab={changeTab} newValue={options.indexOf(currentTab)}/>}
       </AppBar>
+      <Footer />
     </div>
   );
 }
