@@ -45,15 +45,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgba(0,0,0,0.7)",
     minWidth: window.innerWidth,
   },
-  logo: {
-    color: "rgba(255,100,0,1)",
-    fontFamily: 'chevrola',
-    // position: "relative",
-    // right: -900,
-    // top: 10,
-    paddingLeft: 450,
-    paddingTop: 10
-  },
 }))
 
 function Navbar(props) {

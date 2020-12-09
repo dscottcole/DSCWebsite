@@ -5,6 +5,10 @@ import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Menu from './components/Menu'
 import Footer from './components/Footer'
+import Home from "./components/Home";
+import Portfolio from "./components/Portfolio";
+import Resume from "./components/Resume";
+import AboutMe from "./components/AboutMe";
 
 const useStyles = makeStyles((theme) => ({
   App: {
@@ -33,13 +37,21 @@ function App() {
 
   const [currentTab, setCurrentTab] = useState("Home");
 
-  const changeTab = (tabName) => typeof tabName === 'number'? setCurrentTab(options[tabName]) : setCurrentTab(tabName)
+  const changeTab = (tabName) => {
+    if (tabName !== null) {
+      typeof tabName === 'number'? setCurrentTab(options[tabName]) : setCurrentTab(tabName)
+    }
+  }
 
   return (
     <div className={classes.App}>
       <AppBar color="transparent">
           {windowWidth <= 900 ? <Menu options={options} changeTab={changeTab} /> : <Navbar options={options} changeTab={changeTab} newValue={options.indexOf(currentTab)}/>}
       </AppBar>
+      {currentTab === "Home"? <Home /> : null}
+      {currentTab === "Portfolio"? <Portfolio /> : null}
+      {currentTab === "Résumé"? <Resume /> : null}
+      {currentTab === "About Me"? <AboutMe /> : null}
       <Footer />
     </div>
   );
