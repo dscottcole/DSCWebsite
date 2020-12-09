@@ -5,14 +5,15 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Fade from '@material-ui/core/Fade';
 import MenuIcon from '@material-ui/icons/Menu';
 import { makeStyles } from "@material-ui/core";
+import LogoMobile from './LogoMobile'
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor: "rgba(0,0,0,0.7)",
-        height: "7.5vh"
+        backgroundColor: "rgba(0,0,0,0.75)",
+        height: 50
     },
     expandedMenu: {
-        backgroundColor: "rgba(0,0,0,0.7)",
+        backgroundColor: "rgba(0,0,0,0.75)",
         color: "rgba(255,255,255,1)"
     }
 }));
@@ -33,8 +34,9 @@ export default function FadeMenu(props) {
 
     return (
         <div className={classes.root}>
+            <LogoMobile />
             <Button aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
-                <MenuIcon style={{ backgroundColor: "rgba(0,0,0,0.5)", color: "rgba(255,100,0,1)", height: "35", width: "35" }}/>
+                <MenuIcon style={{ backgroundColor: "rgba(0,0,0,0.5)", color: "rgba(255,100,0,1)", height: "30", width: "30", paddingTop: "5" }}/>
             </Button>
             <Menu
                 id="fade-menu"
