@@ -122,7 +122,7 @@ body::before {
   -webkit-text-stroke: 1px black;
   text-shadow: 0px 1px 4px black;
   font-size: 10rem;
-  /* background-color: rgba(0, 0, 0, 0.8); */
+  /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
 .bodyDiv-home-mobile-vert {
@@ -349,6 +349,35 @@ hr.solid {
 #embeddedResume-mobile-hori {
   height: 70vh;
   width: 90vw;
+}
+
+.bodyDiv-contact-form {
+  position: relative;
+  z-index: 1000000;
+  text-align: center;
+  /* top: calc(1vh); */
+  /* left: calc(2.5vw); */
+  /* padding-left: 2.5vw; */
+  /* padding-right: 2.5vw; */
+  /* width: calc(100vw - 10vw); */
+  /* height: calc(100vh - 17.5vh); */
+  overflow-y: auto;
+  /* color: white; */
+  /* -webkit-text-stroke: 0px white; */
+  /* text-shadow: 0px 1px 4px black; */
+  /* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.input-field {
+  -webkit-text-fill-color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
 }
 
 
