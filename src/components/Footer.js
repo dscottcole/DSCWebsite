@@ -3,6 +3,7 @@ import linkedin from "../images/linkedin.png"
 import medium from "../images/medium.png"
 import github from "../images/github.png"
 import youtube from "../images/youtube.png"
+import pdf from "../images/pdf.png"
 
 function Footer() {
 
@@ -21,6 +22,11 @@ function Footer() {
             <div className="socialLogo">
                 <a href="https://github.com/dscottcole">
                     <img id="socialLogo" src={github} alt="github-logo" ></img>
+                </a>
+            </div>
+            <div className="socialLogo">
+                <a href="https://drive.google.com/uc?export=download&id=1ruGz_RvkoRNh8shL7ZkPjt57KT8Vnmng">
+                    <img id="socialLogo" src={pdf} alt="resume-download" ></img>
                 </a>
             </div>
             <div className="socialLogo">

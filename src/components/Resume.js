@@ -1,275 +1,54 @@
 import React from "react";
+import { useEffect, useState } from "react"
 
-function Resume () {
+function useWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+    useEffect(() => {
+        function updateSize() {
+            setSize([window.innerWidth, window.innerHeight]);
+        }
+        window.addEventListener('resize', updateSize);
+        updateSize();
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+}
+
+function Resume() {
+
+    const [windowWidth, windowHeight] = useWindowSize()
+
+    const isMobile = () => /Mobi|Android/i.test(navigator.userAgent)
+
+    const resumeFileID = "1ruGz_RvkoRNh8shL7ZkPjt57KT8Vnmng"
+
+    const resumeDesktop = (
+        <div className="bodyDiv-resume">
+            <iframe id="embeddedResume" frameborder="0" scrolling="no"
+                src={`https://drive.google.com/file/d/${resumeFileID}/preview`}>
+            </iframe>
+        </div>
+    )
+
+    const resumeMobileVert = (
+        <div className="bodyDiv-resume-mobile-vert">
+            <iframe id="embeddedResume-mobile-vert" frameborder="0" scrolling="no"
+                src={`https://drive.google.com/file/d/${resumeFileID}/preview`}>
+            </iframe>
+        </div>
+    )
+
+    const resumeMobileHorizontal = (
+        <div className="bodyDiv-resume-mobile-hori">
+            <iframe id="embeddedResume-mobile-hori" frameborder="0" scrolling="no"
+                src={`https://drive.google.com/file/d/${resumeFileID}/preview`}>
+            </iframe>
+        </div>
+    )
 
     return (
-        <div className="bodyDiv">
-            <p>
-                Talking
-                You can't kill the metal
-                The metal will live on
-                Punk-Rock tried to kill the metal
-                But they failed, as they were smite to the ground
-                New-wave tried to kill the metal
-                But they failed, as they were striken down to the ground
-                Grunge tried to kill the metal Ha, ha, ha, ha, ha, ha
-                They failed, as they were thrown to the ground
-                (argh ... yea!) x2
-                Singing
-                No-one can destroy the metal
-                The metal will strike you down with a vicious blow
-                We are the vanquished foes of the metal
-                We tried to win for why we do not know
-                New-wave tried to destroy the metal, but the metal had its way
-                Grunge then tried to dethrone the metal, but metal was in the way
-                Punk-rock tried to destroy the metal, but metal was much too strong
-                Techno tried to defile the metal, but techno was proven wrong
-                Yea!
-                Metal!
-                It comes from hell!
-                Talking
-                You can't kill the metal
-                The metal will live on
-                Punk-Rock tried to kill the metal
-                But they failed, as they were smite to the ground
-                New-wave tried to kill the metal
-                But they failed, as they were striken down to the ground
-                Grunge tried to kill the metal Ha, ha, ha, ha, ha, ha
-                They failed, as they were thrown to the ground
-                (argh ... yea!) x2
-                Singing
-                No-one can destroy the metal
-                The metal will strike you down with a vicious blow
-                We are the vanquished foes of the metal
-                We tried to win for why we do not know
-                New-wave tried to destroy the metal, but the metal had its way
-                Grunge then tried to dethrone the metal, but metal was in the way
-                Punk-rock tried to destroy the metal, but metal was much too strong
-                Techno tried to defile the metal, but techno was proven wrong
-                Yea!
-                Metal!
-                It comes from hell!
-                Talking
-                You can't kill the metal
-                The metal will live on
-                Punk-Rock tried to kill the metal
-                But they failed, as they were smite to the ground
-                New-wave tried to kill the metal
-                But they failed, as they were striken down to the ground
-                Grunge tried to kill the metal Ha, ha, ha, ha, ha, ha
-                They failed, as they were thrown to the ground
-                (argh ... yea!) x2
-                Singing
-                No-one can destroy the metal
-                The metal will strike you down with a vicious blow
-                We are the vanquished foes of the metal
-                We tried to win for why we do not know
-                New-wave tried to destroy the metal, but the metal had its way
-                Grunge then tried to dethrone the metal, but metal was in the way
-                Punk-rock tried to destroy the metal, but metal was much too strong
-                Techno tried to defile the metal, but techno was proven wrong
-                Yea!
-                Metal!
-                It comes from hell!
-                Talking
-                You can't kill the metal
-                The metal will live on
-                Punk-Rock tried to kill the metal
-                But they failed, as they were smite to the ground
-                New-wave tried to kill the metal
-                But they failed, as they were striken down to the ground
-                Grunge tried to kill the metal Ha, ha, ha, ha, ha, ha
-                They failed, as they were thrown to the ground
-                (argh ... yea!) x2
-                Singing
-                No-one can destroy the metal
-                The metal will strike you down with a vicious blow
-                We are the vanquished foes of the metal
-                We tried to win for why we do not know
-                New-wave tried to destroy the metal, but the metal had its way
-                Grunge then tried to dethrone the metal, but metal was in the way
-                Punk-rock tried to destroy the metal, but metal was much too strong
-                Techno tried to defile the metal, but techno was proven wrong
-                Yea!
-                Metal!
-                It comes from hell!
-                Talking
-                You can't kill the metal
-                The metal will live on
-                Punk-Rock tried to kill the metal
-                But they failed, as they were smite to the ground
-                New-wave tried to kill the metal
-                But they failed, as they were striken down to the ground
-                Grunge tried to kill the metal Ha, ha, ha, ha, ha, ha
-                They failed, as they were thrown to the ground
-                (argh ... yea!) x2
-                Singing
-                No-one can destroy the metal
-                The metal will strike you down with a vicious blow
-                We are the vanquished foes of the metal
-                We tried to win for why we do not know
-                New-wave tried to destroy the metal, but the metal had its way
-                Grunge then tried to dethrone the metal, but metal was in the way
-                Punk-rock tried to destroy the metal, but metal was much too strong
-                Techno tried to defile the metal, but techno was proven wrong
-                Yea!
-                Metal!
-                It comes from hell!
-                Talking
-                You can't kill the metal
-                The metal will live on
-                Punk-Rock tried to kill the metal
-                But they failed, as they were smite to the ground
-                New-wave tried to kill the metal
-                But they failed, as they were striken down to the ground
-                Grunge tried to kill the metal Ha, ha, ha, ha, ha, ha
-                They failed, as they were thrown to the ground
-                (argh ... yea!) x2
-                Singing
-                No-one can destroy the metal
-                The metal will strike you down with a vicious blow
-                We are the vanquished foes of the metal
-                We tried to win for why we do not know
-                New-wave tried to destroy the metal, but the metal had its way
-                Grunge then tried to dethrone the metal, but metal was in the way
-                Punk-rock tried to destroy the metal, but metal was much too strong
-                Techno tried to defile the metal, but techno was proven wrong
-                Yea!
-                Metal!
-                It comes from hell!
-                Talking
-                You can't kill the metal
-                The metal will live on
-                Punk-Rock tried to kill the metal
-                But they failed, as they were smite to the ground
-                New-wave tried to kill the metal
-                But they failed, as they were striken down to the ground
-                Grunge tried to kill the metal Ha, ha, ha, ha, ha, ha
-                They failed, as they were thrown to the ground
-                (argh ... yea!) x2
-                Singing
-                No-one can destroy the metal
-                The metal will strike you down with a vicious blow
-                We are the vanquished foes of the metal
-                We tried to win for why we do not know
-                New-wave tried to destroy the metal, but the metal had its way
-                Grunge then tried to dethrone the metal, but metal was in the way
-                Punk-rock tried to destroy the metal, but metal was much too strong
-                Techno tried to defile the metal, but techno was proven wrong
-                Yea!
-                Metal!
-                It comes from hell!
-                Talking
-                You can't kill the metal
-                The metal will live on
-                Punk-Rock tried to kill the metal
-                But they failed, as they were smite to the ground
-                New-wave tried to kill the metal
-                But they failed, as they were striken down to the ground
-                Grunge tried to kill the metal Ha, ha, ha, ha, ha, ha
-                They failed, as they were thrown to the ground
-                (argh ... yea!) x2
-                Singing
-                No-one can destroy the metal
-                The metal will strike you down with a vicious blow
-                We are the vanquished foes of the metal
-                We tried to win for why we do not know
-                New-wave tried to destroy the metal, but the metal had its way
-                Grunge then tried to dethrone the metal, but metal was in the way
-                Punk-rock tried to destroy the metal, but metal was much too strong
-                Techno tried to defile the metal, but techno was proven wrong
-                Yea!
-                Metal!
-                It comes from hell!
-                Talking
-                You can't kill the metal
-                The metal will live on
-                Punk-Rock tried to kill the metal
-                But they failed, as they were smite to the ground
-                New-wave tried to kill the metal
-                But they failed, as they were striken down to the ground
-                Grunge tried to kill the metal Ha, ha, ha, ha, ha, ha
-                They failed, as they were thrown to the ground
-                (argh ... yea!) x2
-                Singing
-                No-one can destroy the metal
-                The metal will strike you down with a vicious blow
-                We are the vanquished foes of the metal
-                We tried to win for why we do not know
-                New-wave tried to destroy the metal, but the metal had its way
-                Grunge then tried to dethrone the metal, but metal was in the way
-                Punk-rock tried to destroy the metal, but metal was much too strong
-                Techno tried to defile the metal, but techno was proven wrong
-                Yea!
-                Metal!
-                It comes from hell!
-                Talking
-                You can't kill the metal
-                The metal will live on
-                Punk-Rock tried to kill the metal
-                But they failed, as they were smite to the ground
-                New-wave tried to kill the metal
-                But they failed, as they were striken down to the ground
-                Grunge tried to kill the metal Ha, ha, ha, ha, ha, ha
-                They failed, as they were thrown to the ground
-                (argh ... yea!) x2
-                Singing
-                No-one can destroy the metal
-                The metal will strike you down with a vicious blow
-                We are the vanquished foes of the metal
-                We tried to win for why we do not know
-                New-wave tried to destroy the metal, but the metal had its way
-                Grunge then tried to dethrone the metal, but metal was in the way
-                Punk-rock tried to destroy the metal, but metal was much too strong
-                Techno tried to defile the metal, but techno was proven wrong
-                Yea!
-                Metal!
-                It comes from hell!
-                Talking
-                You can't kill the metal
-                The metal will live on
-                Punk-Rock tried to kill the metal
-                But they failed, as they were smite to the ground
-                New-wave tried to kill the metal
-                But they failed, as they were striken down to the ground
-                Grunge tried to kill the metal Ha, ha, ha, ha, ha, ha
-                They failed, as they were thrown to the ground
-                (argh ... yea!) x2
-                Singing
-                No-one can destroy the metal
-                The metal will strike you down with a vicious blow
-                We are the vanquished foes of the metal
-                We tried to win for why we do not know
-                New-wave tried to destroy the metal, but the metal had its way
-                Grunge then tried to dethrone the metal, but metal was in the way
-                Punk-rock tried to destroy the metal, but metal was much too strong
-                Techno tried to defile the metal, but techno was proven wrong
-                Yea!
-                Metal!
-                It comes from hell!
-                Talking
-                You can't kill the metal
-                The metal will live on
-                Punk-Rock tried to kill the metal
-                But they failed, as they were smite to the ground
-                New-wave tried to kill the metal
-                But they failed, as they were striken down to the ground
-                Grunge tried to kill the metal Ha, ha, ha, ha, ha, ha
-                They failed, as they were thrown to the ground
-                (argh ... yea!) x2
-                Singing
-                No-one can destroy the metal
-                The metal will strike you down with a vicious blow
-                We are the vanquished foes of the metal
-                We tried to win for why we do not know
-                New-wave tried to destroy the metal, but the metal had its way
-                Grunge then tried to dethrone the metal, but metal was in the way
-                Punk-rock tried to destroy the metal, but metal was much too strong
-                Techno tried to defile the metal, but techno was proven wrong
-                Yea!
-                Metal!
-                It comes from hell!
-            </p>
+        <div>
+            {isMobile() === false ? resumeDesktop : (windowHeight < windowWidth ? resumeMobileHorizontal : resumeMobileVert)}
         </div>
     )
 }
