@@ -4,7 +4,6 @@ import LinkIcon from '@material-ui/icons/Link';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-import { ExpandLess } from "@material-ui/icons";
 
 
 function ProjectCard(props) {
