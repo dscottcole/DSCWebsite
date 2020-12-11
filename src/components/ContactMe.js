@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
-import { makeStyles } from "@material-ui/core/styles";
 import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import emailjs from 'emailjs-com';
 import { Typography } from "@material-ui/core";
-import grey from '@material-ui/core/colors/grey'
 
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
-
 
 const ContactMe = () => {
     const [open, setOpen] = React.useState(false);
@@ -64,7 +61,6 @@ const ContactMe = () => {
             onChange={(e) => setName(e.target.value)}
             required
             autoFocus
-            startAdornment
             color='secondary'
         />
     )
@@ -119,7 +115,7 @@ const ContactMe = () => {
                 <Typography variant="h3">Contact Form</Typography>
             </div>
             <div>
-                <form onSubmit={(e) => handleSubmit(e)} className="contactForm" validate autocomplete="off">
+                <form onSubmit={(e) => handleSubmit(e)} className="contactForm" validate="true" autoComplete="off">
                     <div>
                         {nameField}
                     </div>

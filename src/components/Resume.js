@@ -24,7 +24,7 @@ function Resume() {
 
     const resumeDesktop = (
         <div className="bodyDiv-resume">
-            <iframe title="DSC Resume" id="embeddedResume" frameborder="0" scrolling="no"
+            <iframe title="DSC Resume" id="embeddedResume" frameBorder="0" scrolling="no"
                 src={`https://drive.google.com/file/d/${resumeFileID}/preview`}>
             </iframe>
         </div>
@@ -32,7 +32,7 @@ function Resume() {
 
     const resumeMobileVert = (
         <div className="bodyDiv-resume-mobile-vert">
-            <iframe title="DSC Resume" id="embeddedResume-mobile-vert" frameborder="0" scrolling="no"
+            <iframe title="DSC Resume" id="embeddedResume-mobile-vert" frameBorder="0" scrolling="no"
                 src={`https://drive.google.com/file/d/${resumeFileID}/preview`}>
             </iframe>
         </div>
