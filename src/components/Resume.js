@@ -24,7 +24,7 @@ function Resume() {
 
     const resumeDesktop = (
         <div className="bodyDiv-resume">
-            <iframe id="embeddedResume" frameborder="0" scrolling="no"
+            <iframe title="DSC Resume" id="embeddedResume" frameborder="0" scrolling="no"
                 src={`https://drive.google.com/file/d/${resumeFileID}/preview`}>
             </iframe>
         </div>
@@ -32,7 +32,7 @@ function Resume() {
 
     const resumeMobileVert = (
         <div className="bodyDiv-resume-mobile-vert">
-            <iframe id="embeddedResume-mobile-vert" frameborder="0" scrolling="no"
+            <iframe title="DSC Resume" id="embeddedResume-mobile-vert" frameborder="0" scrolling="no"
                 src={`https://drive.google.com/file/d/${resumeFileID}/preview`}>
             </iframe>
         </div>
@@ -40,7 +40,7 @@ function Resume() {
 
     const resumeMobileHorizontal = (
         <div className="bodyDiv-resume-mobile-hori">
-            <iframe id="embeddedResume-mobile-hori" frameborder="0" scrolling="no"
+            <iframe title="DSC Resume" id="embeddedResume-mobile-hori" frameborder="0" scrolling="no"
                 src={`https://drive.google.com/file/d/${resumeFileID}/preview`}>
             </iframe>
         </div>

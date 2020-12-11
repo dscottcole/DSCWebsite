@@ -18,35 +18,35 @@ function ProjectCard(props) {
         <div className="projectButton">
             <Button startIcon={<LinkIcon />} size="medium" variant="contained" style={{ backgroundColor: "rgba(0,0,0,1)", color: "rgba(255,255,255,1)" }} href={project.applicationLink}>
                 Application
-        </Button>
+            </Button>
         </div>
     )
     const githubButton = (
         <div className="projectButton">
             <Button startIcon={<GitHubIcon />} size="medium" variant="contained" style={{ backgroundColor: "rgba(0,0,0,1)", color: "rgba(255,255,255,1)" }} href={project.combinedGithub}>
                 Github
-        </Button>
+            </Button>
         </div>
     )
     const githubButtonBack = (
         <div className="projectButton">
             <Button startIcon={<GitHubIcon />} size="medium" variant="contained" style={{ backgroundColor: "rgba(0,0,0,1)", color: "rgba(255,255,255,1)" }} href={project.githubBack}>
                 Github Backend
-        </Button>
+            </Button>
         </div>
     )
     const githubButtonFront = (
         <div className="projectButton">
             <Button startIcon={<GitHubIcon />} size="medium" variant="contained" style={{ backgroundColor: "rgba(0,0,0,1)", color: "rgba(255,255,255,1)" }} href={project.githubFront}>
                 Github Frontend
-        </Button>
+            </Button>
         </div>
     )
     const moreInfoButton = (
         <div className="projectButton">
             <Button startIcon={<ExpandMoreIcon />} onClick={handleClick} size="medium" variant="contained" style={{ backgroundColor: "rgba(255,255,255,1)", color: "rgba(0,0,0,1)"}}>
                 More Info
-        </Button>
+            </Button>
         </div>
     )
 
@@ -54,7 +54,7 @@ function ProjectCard(props) {
         <div className="projectButton">
             <Button startIcon={<ExpandLessIcon />} onClick={handleClick} size="medium" variant="contained" style={{ backgroundColor: "rgba(255,255,255,1)", color: "rgba(0,0,0,1)"}}>
                 Less Info
-        </Button>
+            </Button>
         </div>
     )
 
