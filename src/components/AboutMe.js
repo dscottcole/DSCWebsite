@@ -20,7 +20,7 @@ function AboutMe() {
                         </div>
                         <div>
                             <br></br>
-                             my personal development, I am working on refining my React.js & Redux.js knowledge. After that, I am planning on completing a Python bootcamp while training for the 2021 Mid South Gravel 100.
+                             For my personal development, I am working on refining my React.js & Redux.js knowledge. After that, I am planning on completing a Python bootcamp while training for the 2021 Mid South Gravel 100.
                         </div>
                         <div>
                             <br></br>
@@ -45,7 +45,7 @@ function AboutMe() {
                         </div>
                         <div>
                             <br></br>
-                             my personal development, I am working on refining my React.js & Redux.js knowledge. After that, I am planning on completing a Python bootcamp while training for the 2021 Mid South Gravel 100.
+                             For my personal development, I am working on refining my React.js & Redux.js knowledge. After that, I am planning on completing a Python bootcamp while training for the 2021 Mid South Gravel 100.
                         </div>
                         <div>
                             <br></br>

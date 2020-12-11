@@ -129,9 +129,9 @@ const ContactMe = () => {
                         {messageField}
                     </div>
                     <div className="contactButton">
-                        <Button type="submit" variant="contained" style={{ backgroundColor: "rgba(0,0,0,1)", color: "rgba(255,255,255,1)" }}>
+                    <Button type="submit" variant="contained" style={{ backgroundColor: "rgba(255,255,255,1)", color: "rgba(0,0,0,1)" }}>
                             Send Message
-                </Button>
+                    </Button>
                     </div>
                 </form>
                 <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
@@ -149,7 +149,7 @@ const ContactMe = () => {
                 <Typography variant="h3">Contact Form</Typography>
             </div>
             <div>
-                <form onSubmit={(e) => handleSubmit(e)} className="contactForm" validate autocomplete="off">
+                <form onSubmit={(e) => handleSubmit(e)} className="contactForm" validate="true" autoComplete="off">
                     <div>
                         {nameField}
                     </div>
@@ -163,7 +163,7 @@ const ContactMe = () => {
                         {messageField}
                     </div>
                     <div className="contactButton">
-                        <Button type="submit" variant="contained" style={{ backgroundColor: "rgba(0,0,0,1)", color: "rgba(255,255,255,1)" }}>
+                        <Button type="submit" variant="contained" style={{ backgroundColor: "rgba(255,255,255,1)", color: "rgba(0,0,0,1)" }}>
                             Send Message
                 </Button>
                     </div>
