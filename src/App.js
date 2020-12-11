@@ -18,10 +18,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function useWindowSize() {
-  const [size, setSize] = useState([0, 0]);
+  // const [size, setSize] = useState([0, 0]);
+  const [size, setSize] = useState(0)
   useEffect(() => {
     function updateSize() {
-      setSize([window.innerWidth, window.innerHeight]);
+      // setSize([window.innerWidth, window.innerHeight]);
+      setSize(window.innerWidth)
     }
     window.addEventListener('resize', updateSize);
     updateSize();
@@ -33,7 +35,8 @@ function useWindowSize() {
 function App() {
   const classes = useStyles();
 
-  const [windowWidth, windowHeight] = useWindowSize()
+  // const [windowWidth, windowHeight] = useWindowSize()
+  const windowWidth = useWindowSize()
   const options = ["Home", "Portfolio", "Résumé", "About Me", "Contact Me"]
 
   const [currentTab, setCurrentTab] = useState("Home");
