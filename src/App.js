@@ -47,7 +47,7 @@ function App() {
   return (
     <div className={classes.App}>
       <AppBar color="transparent">
-          {windowWidth <= 900 ? <Menu options={options} changeTab={changeTab} /> : <Navbar options={options} changeTab={changeTab} newValue={options.indexOf(currentTab)}/>}
+          {windowWidth <= 1080 ? <Menu options={options} changeTab={changeTab} /> : <Navbar options={options} changeTab={changeTab} newValue={options.indexOf(currentTab)}/>}
       </AppBar>
       {currentTab === "Home"? <Home /> : null}
       {currentTab === "Portfolio"? <Portfolio /> : null}
