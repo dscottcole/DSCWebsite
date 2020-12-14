@@ -83,7 +83,6 @@ body::before {
   padding-top: 5px;
   padding-right: 10px;
   padding-left: 10px;
-  border-radius: 22.5%;
 }
 
 .bodyDiv {
@@ -99,9 +98,7 @@ body::before {
   overflow-y: auto;
   color: white;
   -webkit-text-stroke: 0px black;
-  /* text-shadow: 0px 1px 4px black; */
   font-size: 10rem;
-  /* background-color: rgba(0, 0, 0, 0.8); */
 }
 
 ::-webkit-scrollbar {
@@ -122,7 +119,6 @@ body::before {
   overflow-y: auto;
   color: white;
   -webkit-text-stroke: 0px black;
-  /* text-shadow: 0px 1px 4px black; */
   font-size: 10rem;
   /* background-color: rgba(0, 0, 0, 0.3); */
 }
@@ -140,7 +136,23 @@ body::before {
   overflow-y: auto;
   color: white;
   -webkit-text-stroke: 0px black;
-  /* text-shadow: 0px 1px 4px black; */
+  font-size: 10rem;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+}
+
+.bodyDiv-home-mobile-hori {
+  position: relative;
+  z-index: 1000;
+  text-align: center;
+  top: calc(0.5vh);
+  left: calc(1.5vw);
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  width: calc(90vw);
+  height: calc(72vh);
+  overflow-y: auto;
+  color: white;
+  -webkit-text-stroke: 0px black;
   font-size: 10rem;
   /* background-color: rgba(0, 0, 0, 0.8); */
 }
@@ -170,6 +182,23 @@ body::before {
   margin-top: -7.5%;
 }
 
+.home-image-mobile {
+  width: 175px;
+  height: 175px;
+  overflow: hidden;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgba(46, 49, 49, 1);
+}
+
+#dsc-home-mobile {
+  height: 250px;
+  width: auto;
+  margin: 0 auto;
+  margin-left: -28%;
+  margin-top: -7.5%;
+}
+
 .home-text {
   padding-top: 3vh;
 }
@@ -193,7 +222,6 @@ body::before {
   overflow-y: auto;
   color: white;
   -webkit-text-stroke: 0px black;
-  /* text-shadow: 0px 1px 4px black; */
   font-size: 10rem;
   background-color: rgba(0, 0, 0, 0.25);
   border-radius: 5px;
@@ -239,7 +267,7 @@ hr.solid {
 }
 
 .projectName {
-  padding-bottom: 25px;
+  padding-bottom: 10px;
 }
 
 .bodyDiv-portfolio-mobile-vert {
@@ -255,7 +283,6 @@ hr.solid {
   overflow-y: auto;
   color: white;
   -webkit-text-stroke: 0px black;
-  /* text-shadow: 0px 1px 4px black; */
   font-size: 10rem;
   background-color: rgba(0, 0, 0, 0.25);
   border-radius: 5px;
@@ -282,6 +309,45 @@ hr.solid {
   width: 75vw;
 }
 
+.bodyDiv-portfolio-mobile-hori {
+  position: relative;
+  z-index: 1000;
+  text-align: center;
+  top: calc(0.5vh);
+  left: calc(1.5vw);
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  width: calc(90vw);
+  height: calc(72vh);
+  overflow-y: auto;
+  color: white;
+  -webkit-text-stroke: 0px black;
+  font-size: 10rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.projectCard-mobile-hori {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2vh;
+}
+
+.buttonSection-mobile-hori {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 10px;
+}
+
+#videoPreview-mobile-hori {
+  height: 50vh;
+  width: 50vw;
+}
+
 .bodyDiv-resume {
   position: relative;
   z-index: 1000;
@@ -295,7 +361,6 @@ hr.solid {
   /* overflow-y: auto; */
   color: white;
   -webkit-text-stroke: 0px black;
-  /* text-shadow: 0px 1px 4px black; */
   font-size: 10rem;
   /* background-color: rgba(0, 0, 0, 0.25); */
   border-radius: 5px;
@@ -314,7 +379,6 @@ hr.solid {
   /* overflow-y: auto; */
   color: white;
   -webkit-text-stroke: 0px black;
-  /* text-shadow: 0px 1px 4px black; */
   font-size: 10rem;
   /* background-color: rgba(0, 0, 0, 0.25); */
   border-radius: 5px;
@@ -324,16 +388,15 @@ hr.solid {
   position: relative;
   z-index: 1000;
   text-align: center;
-  top: calc(7vh);
+  top: calc(1vh);
   left: calc(1vw);
   padding-left: 2.5vw;
   padding-right: 2.5vw;
-  width: calc(100vw - 10vw);
-  height: calc(100vh - 17.5vh);
+  width: calc(90vw);
+  height: calc(72vh);
   /* overflow-y: auto; */
   color: white;
   -webkit-text-stroke: 0px black;
-  /* text-shadow: 0px 1px 4px black; */
   font-size: 10rem;
   /* background-color: rgba(0, 0, 0, 0.25); */
   border-radius: 5px;
@@ -358,16 +421,10 @@ hr.solid {
   position: relative;
   z-index: 1000;
   text-align: center;
-  /* top: calc(1vh); */
   left: calc(2vw);
-  /* padding-left: 2.5vw; */
-  /* padding-right: 2.5vw; */
-  /* width: calc(100vw - 10vw); */
-  /* height: calc(100vh - 17.5vh); */
   overflow-y: auto;
   color: white;
   -webkit-text-stroke: 0px white;
-  text-shadow: 0px 2px 6px black;
   /* background-color: rgba(0, 0, 0, 0.3); */
   display: flex;
   flex-direction: column;
@@ -403,7 +460,8 @@ input:-webkit-autofill:active {
 
 #successMessage {
   position: absolute;
-  top: -17.5vh;
+  width: 175px;
+  top: -20vh;
 }
 
 .contactTitle {
@@ -414,17 +472,11 @@ input:-webkit-autofill:active {
   position: relative;
   z-index: 1000;
   text-align: center;
-  /* top: calc(1vh); */
   left: calc(2vw);
-  /* padding-left: 2.5vw; */
-  /* padding-right: 2.5vw; */
-  /* width: calc(100vw - 10vw); */
-  /* height: calc(100vh - 17.5vh); */
   overflow-y: auto;
   color: white;
   -webkit-text-stroke: 0px white;
-  text-shadow: 0px 2px 6px black;
-  /* background-color: rgba(0, 0, 0, 0.3); */
+  /* text-shadow: 0px 2px 6px black; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -436,6 +488,35 @@ input:-webkit-autofill:active {
   border-radius: 2px;
   border-color: rgba(255, 100, 0, 1);
   width: 80vw;
+}
+
+.contactContainer-hori {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(90vw);
+  height: calc(72vh);
+  overflow-y: auto;
+  color: white;
+  /* text-shadow: 0px 2px 6px black; */
+}
+
+.bodyDiv-contact-form-mobile-hori {
+  position: relative;
+  z-index: 1000;
+  text-align: center;
+  left: calc(1vw);
+
+  overflow-y: auto;
+  color: white;
+  -webkit-text-stroke: 0px white;
+  /* text-shadow: 0px 2px 6px black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bodyDiv-aboutme {
@@ -451,7 +532,7 @@ input:-webkit-autofill:active {
   overflow-y: auto;
   color: white;
   -webkit-text-stroke: 0px black;
-  text-shadow: 0px 2px 6px black;
+  /* text-shadow: 0px 2px 6px black; */
   font-size: 10rem;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
@@ -479,8 +560,6 @@ input:-webkit-autofill:active {
   height: 500px;
   width: auto;
   margin: 0 auto;
-  /* margin-left: -2.5%;
-  margin-top: -2.5%; */
 }
 
 .aboutme-text {
@@ -503,7 +582,7 @@ input:-webkit-autofill:active {
   overflow-y: auto;
   color: white;
   -webkit-text-stroke: 0px black;
-  text-shadow: 0px 2px 6px black;
+  /* text-shadow: 0px 2px 6px black; */
   font-size: 10rem;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
@@ -534,3 +613,46 @@ input:-webkit-autofill:active {
   padding-bottom: 25px;
 }
 
+.bodyDiv-aboutme-mobile-hori {
+  position: relative;
+  z-index: 1000;
+  text-align: center;
+  top: calc(0.5vh);
+  left: calc(1vw);
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  width: calc(90vw);
+  height: calc(72vh);
+  overflow-y: auto;
+  color: white;
+  -webkit-text-stroke: 0px black;
+  /* text-shadow: 0px 2px 6px black; */
+  font-size: 10rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.aboutme-image-mobile-hori {
+  position: relative;
+  width: 200px;
+  height: 225px;
+  overflow: hidden;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgba(191,191,191,1);
+}
+
+#dsc-aboutme-mobile-hori {
+  height: 225px;
+  width: auto;
+  margin: 0 auto;
+  /* margin-left: -2.5%;
+  margin-top: -2.5%; */
+}
+
+.aboutme-text-mobile-hori {
+  width: 85vw;
+  height: auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
