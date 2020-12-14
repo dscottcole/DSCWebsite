@@ -16,7 +16,7 @@ body {
 
 body::before {
   content: "";
-  background-image: url("./images/background.jpeg");
+  background-image: url("./images/background60.jpeg");
   background-size: cover;
   position: absolute;
   top: 0px;
