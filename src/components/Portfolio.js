@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard"
 import ProjectCardMobile from "./ProjectCardMobile"
 
+function useWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+    useEffect(() => {
+        function updateSize() {
+            setSize([window.innerWidth, window.innerHeight]);
+        }
+        window.addEventListener('resize', updateSize);
+        updateSize();
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+}
+
 function Portfolio () {
+
+    const [windowWidth, windowHeight] = useWindowSize()
 
     const isMobile = () => /Mobi|Android/i.test(navigator.userAgent)
 
@@ -24,9 +39,15 @@ function Portfolio () {
         </div>
     )
 
+    const portfolioMobileHori = (
+        <div className="bodyDiv-portfolio-mobile-hori">
+            {projects.map((project, index) => <ProjectCardMobile key={index} project={project} />)}
+        </div>
+    )
+
     return (
         <div>
-            {isMobile() === false? portfolioDesktop : portfolioMobileVert}
+            {isMobile() === false? portfolioDesktop : (windowHeight < windowWidth ? portfolioMobileHori : portfolioMobileVert)}
         </div>
     )
 }

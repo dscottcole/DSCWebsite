@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
@@ -10,8 +10,22 @@ function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
+function useWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+    useEffect(() => {
+        function updateSize() {
+            setSize([window.innerWidth, window.innerHeight]);
+        }
+        window.addEventListener('resize', updateSize);
+        updateSize();
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+}
+
 const ContactMe = () => {
     const [open, setOpen] = React.useState(false);
+    const [windowWidth, windowHeight] = useWindowSize()
 
     const isMobile = () => /Mobi|Android/i.test(navigator.userAgent)
 
@@ -57,7 +71,7 @@ const ContactMe = () => {
             variant="filled"
             name="name"
             type="text"
-            className={isMobile() === false? "input-field" : "input-field-mobile-vert"}
+            className={isMobile() === false ? "input-field" : "input-field-mobile-vert"}
             onChange={(e) => setName(e.target.value)}
             required
             autoFocus
@@ -72,7 +86,7 @@ const ContactMe = () => {
             variant="filled"
             name="email"
             type="text"
-            className={isMobile() === false? "input-field" : "input-field-mobile-vert"}
+            className={isMobile() === false ? "input-field" : "input-field-mobile-vert"}
             onChange={(e) => setEmail(e.target.value)}
             required
             color='secondary'
@@ -86,7 +100,7 @@ const ContactMe = () => {
             variant="filled"
             name="subject"
             type="text"
-            className={isMobile() === false? "input-field" : "input-field-mobile-vert"}
+            className={isMobile() === false ? "input-field" : "input-field-mobile-vert"}
             onChange={(e) => setSubject(e.target.value)}
             required
             color='secondary'
@@ -100,7 +114,7 @@ const ContactMe = () => {
             variant="filled"
             name="message"
             type="text"
-            className={isMobile() === false? "input-field" : "input-field-mobile-vert"}
+            className={isMobile() === false ? "input-field" : "input-field-mobile-vert"}
             onChange={(e) => setMessage(e.target.value)}
             required
             multiline
@@ -129,7 +143,7 @@ const ContactMe = () => {
                         {messageField}
                     </div>
                     <div className="contactButton">
-                    <Button type="submit" variant="contained" style={{ backgroundColor: "rgba(255,255,255,1)", color: "rgba(0,0,0,1)" }}>
+                        <Button type="submit" variant="contained" style={{ backgroundColor: "rgba(255,255,255,1)", color: "rgba(0,0,0,1)" }}>
                             Send Message
                     </Button>
                     </div>
@@ -165,7 +179,7 @@ const ContactMe = () => {
                     <div className="contactButton">
                         <Button type="submit" variant="contained" style={{ backgroundColor: "rgba(255,255,255,1)", color: "rgba(0,0,0,1)" }}>
                             Send Message
-                </Button>
+                        </Button>
                     </div>
                 </form>
                 <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
@@ -177,9 +191,45 @@ const ContactMe = () => {
         </div>
     )
 
+    const contactMobileHori = (
+        <div className="bodyDiv-contact-form-mobile-Hori">
+            <div className="contactContainer-hori">
+                <div className="contactTitle">
+                    <Typography variant="h3">Contact Form</Typography>
+                </div>
+                <div>
+                    <form onSubmit={(e) => handleSubmit(e)} className="contactForm" validate="true" autoComplete="off">
+                        <div>
+                            {nameField}
+                        </div>
+                        <div>
+                            {emailField}
+                        </div>
+                        <div>
+                            {subjectField}
+                        </div>
+                        <div>
+                            {messageField}
+                        </div>
+                        <div className="contactButton">
+                            <Button type="submit" variant="contained" style={{ backgroundColor: "rgba(255,255,255,1)", color: "rgba(0,0,0,1)" }}>
+                                Send Message
+                            </Button>
+                        </div>
+                    </form>
+                    <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+                        <Alert id="successMessage" onClose={handleClose} severity="success">
+                            Message Sent!
+                </Alert>
+                    </Snackbar>
+                </div>
+            </div>
+        </div>
+    )
+
     return (
         <div>
-            {isMobile() === false ? contactDesktop : contactMobileVert}
+            {isMobile() === false ? contactDesktop : (windowHeight < windowWidth ? contactMobileHori : contactMobileVert)}
         </div>
     );
 }
