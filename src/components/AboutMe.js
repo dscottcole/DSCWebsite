@@ -1,5 +1,5 @@
 import React from "react";
-import DSC2 from '../images/DSC2.jpg'
+import DSC2 from '../images/DSC70.jpg'
 import { Typography } from "@material-ui/core"
 
 function AboutMe() {

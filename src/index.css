@@ -55,7 +55,7 @@ body::before {
 .logoContainer {
   position: absolute;
   z-index: 10000;
-  top: 1%;
+  top: 7.5%;
   left: calc(100vw - 25vw)
 }
 
@@ -83,6 +83,7 @@ body::before {
   padding-top: 5px;
   padding-right: 10px;
   padding-left: 10px;
+  border-radius: 22.5%;
 }
 
 .bodyDiv {
@@ -175,6 +176,7 @@ body::before {
 
 .home-bottom-text {
   padding-top: 15vh;
+  padding-bottom: 2.5vh;
 }
 
 
@@ -389,7 +391,7 @@ hr.solid {
 
 .contactButton {
   color: white;
-  padding-top: 5px;
+  padding-top: 15px;
 }
 
 input:-webkit-autofill,
