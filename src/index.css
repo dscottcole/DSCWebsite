@@ -208,7 +208,6 @@ body::before {
   padding-bottom: 2.5vh;
 }
 
-
 .bodyDiv-portfolio {
   position: relative;
   z-index: 1000;
@@ -522,7 +521,7 @@ input:-webkit-autofill:active {
 .bodyDiv-aboutme {
   position: relative;
   z-index: 1000;
-  text-align: center;
+  text-align: left;
   top: calc(1vh);
   left: calc(2vw);
   padding-left: 2.5vw;
@@ -572,7 +571,7 @@ input:-webkit-autofill:active {
 .bodyDiv-aboutme-mobile-vert {
   position: relative;
   z-index: 1000;
-  text-align: center;
+  text-align: left;
   top: calc(1vh);
   left: calc(1vw);
   padding-left: 2.5vw;
@@ -616,7 +615,7 @@ input:-webkit-autofill:active {
 .bodyDiv-aboutme-mobile-hori {
   position: relative;
   z-index: 1000;
-  text-align: center;
+  text-align: left;
   top: calc(0.5vh);
   left: calc(1vw);
   padding-left: 2.5vw;
