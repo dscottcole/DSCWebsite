@@ -101,7 +101,7 @@ function App(props) {
           <ContactMe />
         </Route>
 
-        <Route path="/undefined">
+        <Route>
           <Redirect to="/" />
         </Route>
 
