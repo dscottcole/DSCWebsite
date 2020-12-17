@@ -36,7 +36,7 @@ export default function FadeMenu(props) {
         <div className={classes.root}>
             <LogoMobile />
             <Button aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
-                <MenuIcon style={{ backgroundColor: "rgba(0,0,0,0.5)", color: "rgba(255,100,0,1)", height: "30", width: "30", paddingTop: "5" }}/>
+                <MenuIcon style={{ borderRadius: "3px", backgroundColor: "rgba(0,0,0,0.5)", color: "rgba(255,100,0,1)", height: "30", width: "30", paddingTop: "2px" }}/>
             </Button>
             <Menu
                 id="fade-menu"
