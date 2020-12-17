@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   },
   nav: {
     // backgroundColor: "#2e1534",
-    backgroundColor: "rgba(0,0,0,0.7)",
+    backgroundColor: "rgba(0,0,0,1)",
     minWidth: window.innerWidth,
   },
 }))
