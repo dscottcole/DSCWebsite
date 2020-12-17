@@ -9,11 +9,11 @@ import LogoMobile from './LogoMobile'
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor: "rgba(0,0,0,0.75)",
+        backgroundColor: "rgba(0,0,0,1)",
         height: 50
     },
     expandedMenu: {
-        backgroundColor: "rgba(0,0,0,0.75)",
+        backgroundColor: "rgba(0,0,0,1)",
         color: "rgba(255,255,255,1)"
     }
 }));
