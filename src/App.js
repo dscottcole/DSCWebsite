@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Menu from './components/Menu'
 import Footer from './components/Footer'
+import SecondFooter from './components/SecondFooter'
 import Home from "./components/Home";
 import Portfolio from "./components/Portfolio";
 import Resume from "./components/Resume";
@@ -105,6 +106,7 @@ function App(props) {
           <Redirect to="/" />
         </Route>
 
+        {currentTab === "Home"? <SecondFooter /> : null}
         <Footer />
       </div>
     </Switch>
