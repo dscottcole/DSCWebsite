@@ -36,7 +36,7 @@ function AboutMe() {
                     <img id="dsc-aboutme" src={DSC2} alt="dsc2"></img>
                 </div>
                 <div className="aboutme-text">
-                    <Typography variant="h5">
+                    <Typography variant="h6">
                         <div>
                             {text1}
                         </div>
@@ -65,7 +65,7 @@ function AboutMe() {
                     <img id="dsc-aboutme-mobile-vert" src={DSC2} alt="dsc2"></img>
                 </div>
                 <div className="aboutme-text-mobile-vert">
-                    <Typography variant="h5">
+                    <Typography variant="h6">
                         <div>
                             {text1}
                         </div>
